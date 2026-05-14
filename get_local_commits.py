@@ -31,10 +31,7 @@ for commit in commits:
     print(f"メッセージ:{message}")
 
     change_files = list(commit.stats.files.keys())
-    if len(change_files) > 3:
-        print(f"変更ファイル:{change_files[:3]} ...他{len(change_files)-3}件")
-    else:
-        print(f"変更ファイル:{change_files}")
+    print(f"変更ファイル:{change_files}")
 
     stats = commit.stats.total
     print(f"変更ファイル数:{stats['files']}")
